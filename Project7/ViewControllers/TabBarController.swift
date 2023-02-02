@@ -12,10 +12,50 @@ class TabBarController: UITabBarController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        let mainViewController = MainViewController()
-        let detailViewController = DetailViewController()
+        generateTabBar()
+        setTabBarAppearance()
+    }
+    
+    private func generateTabBar() {
+        viewControllers = [
+            generateVC(viewController: MainViewController(),
+                       title: "Main",
+                       image: UIImage(systemName: "person.crop.circle.dashed")),
+            generateVC(viewController: DetailViewController(), title: "Detail", image: UIImage(systemName: "tent.2.circle.fill"))
+        ]
+    }
+    
+    private func generateVC(viewController: UIViewController, title: String, image: UIImage?) -> UIViewController {
+        viewController.tabBarItem.title = title
+        viewController.tabBarItem.image = image
+        return viewController
+    }
+    
+    private func setTabBarAppearance() {
+        let positionOnX: CGFloat = 10
+        let positionOnY: CGFloat = 14
+        let width = tabBar.bounds.width - positionOnX * 2
+        let height = tabBar.bounds.height + positionOnY * 2
+        let roundLayer = CAShapeLayer()
         
-        viewControllers = [mainViewController, detailViewController]
+        let bezierPath = UIBezierPath(
+            roundedRect: CGRect(
+                x: positionOnX,
+                y: tabBar.bounds.minY - positionOnY,
+                width: width,
+                height: height),
+            cornerRadius: height / 2
+        )
         
+        roundLayer.path = bezierPath.cgPath
+        
+        tabBar.layer.insertSublayer(roundLayer, at: 0)
+        
+        tabBar.itemWidth = width / 2
+        tabBar.itemPositioning = .centered
+        
+        roundLayer.fillColor = UIColor.mainWhite.cgColor
+        tabBar.tintColor = .tabBarItemAccent
+        tabBar.unselectedItemTintColor = .tabBarItemLight
     }
 }

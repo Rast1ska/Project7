@@ -14,6 +14,7 @@
 		172F1593298BC14F00DD7859 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 172F1591298BC14F00DD7859 /* LaunchScreen.storyboard */; };
 		172F159F298BC56A00DD7859 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 172F159E298BC56A00DD7859 /* TabBarController.swift */; };
 		172F15A1298BC5B700DD7859 /* DetaildViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 172F15A0298BC5B700DD7859 /* DetaildViewController.swift */; };
+		172F15A4298BC9B300DD7859 /* UIColorEctension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 172F15A3298BC9B300DD7859 /* UIColorEctension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		172F1594298BC14F00DD7859 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		172F159E298BC56A00DD7859 /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
 		172F15A0298BC5B700DD7859 /* DetaildViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetaildViewController.swift; sourceTree = "<group>"; };
+		172F15A3298BC9B300DD7859 /* UIColorEctension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColorEctension.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,8 +60,9 @@
 		172F1585298BC14C00DD7859 /* Project7 */ = {
 			isa = PBXGroup;
 			children = (
-				172F159A298BC27700DD7859 /* Application */,
 				172F159B298BC29000DD7859 /* ViewControllers */,
+				172F159A298BC27700DD7859 /* Application */,
+				172F15A2298BC99500DD7859 /* Extension */,
 				172F159C298BC29700DD7859 /* Resources */,
 				172F159D298BC29E00DD7859 /* SupportFiles */,
 			);
@@ -100,6 +103,14 @@
 				172F1594298BC14F00DD7859 /* Info.plist */,
 			);
 			path = SupportFiles;
+			sourceTree = "<group>";
+		};
+		172F15A2298BC99500DD7859 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				172F15A3298BC9B300DD7859 /* UIColorEctension.swift */,
+			);
+			path = Extension;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -172,6 +183,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				172F15A4298BC9B300DD7859 /* UIColorEctension.swift in Sources */,
 				172F15A1298BC5B700DD7859 /* DetaildViewController.swift in Sources */,
 				172F158B298BC14C00DD7859 /* MainViewController.swift in Sources */,
 				172F159F298BC56A00DD7859 /* TabBarController.swift in Sources */,
