@@ -9,19 +9,23 @@
 /* Begin PBXBuildFile section */
 		172F1587298BC14C00DD7859 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 172F1586298BC14C00DD7859 /* AppDelegate.swift */; };
 		172F1589298BC14C00DD7859 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 172F1588298BC14C00DD7859 /* SceneDelegate.swift */; };
-		172F158B298BC14C00DD7859 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 172F158A298BC14C00DD7859 /* ViewController.swift */; };
+		172F158B298BC14C00DD7859 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 172F158A298BC14C00DD7859 /* MainViewController.swift */; };
 		172F1590298BC14F00DD7859 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 172F158F298BC14F00DD7859 /* Assets.xcassets */; };
 		172F1593298BC14F00DD7859 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 172F1591298BC14F00DD7859 /* LaunchScreen.storyboard */; };
+		172F159F298BC56A00DD7859 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 172F159E298BC56A00DD7859 /* TabBarController.swift */; };
+		172F15A1298BC5B700DD7859 /* DetaildViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 172F15A0298BC5B700DD7859 /* DetaildViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		172F1583298BC14C00DD7859 /* Project7.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Project7.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		172F1586298BC14C00DD7859 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		172F1588298BC14C00DD7859 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		172F158A298BC14C00DD7859 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		172F158A298BC14C00DD7859 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		172F158F298BC14F00DD7859 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		172F1592298BC14F00DD7859 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		172F1594298BC14F00DD7859 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		172F159E298BC56A00DD7859 /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
+		172F15A0298BC5B700DD7859 /* DetaildViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetaildViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,7 +78,9 @@
 		172F159B298BC29000DD7859 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
-				172F158A298BC14C00DD7859 /* ViewController.swift */,
+				172F158A298BC14C00DD7859 /* MainViewController.swift */,
+				172F159E298BC56A00DD7859 /* TabBarController.swift */,
+				172F15A0298BC5B700DD7859 /* DetaildViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -166,7 +172,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				172F158B298BC14C00DD7859 /* ViewController.swift in Sources */,
+				172F15A1298BC5B700DD7859 /* DetaildViewController.swift in Sources */,
+				172F158B298BC14C00DD7859 /* MainViewController.swift in Sources */,
+				172F159F298BC56A00DD7859 /* TabBarController.swift in Sources */,
 				172F1587298BC14C00DD7859 /* AppDelegate.swift in Sources */,
 				172F1589298BC14C00DD7859 /* SceneDelegate.swift in Sources */,
 			);
