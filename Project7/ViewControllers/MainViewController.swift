@@ -45,12 +45,15 @@ class MainViewController: UIViewController {
 // MARK: - UITableViewDataSource
 extension MainViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        100
+        
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
-        cell.textLabel?.text = String(indexPath.row)
+        var content = cell.defaultContentConfiguration()
+        content.text = "Title goes here"
+        content.secondaryText = "Subtitle goes here"
+        cell.contentConfiguration = content
         return cell
     }
 }
