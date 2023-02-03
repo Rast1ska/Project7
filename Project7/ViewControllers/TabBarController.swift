@@ -18,14 +18,16 @@ class TabBarController: UITabBarController {
     
     private func generateTabBar() {
         viewControllers = [
-            generateVC(viewController: MainViewController(),
+            generateVC(viewController: UINavigationController(rootViewController: MainViewController()),
                        title: "Main",
-                       image: UIImage(systemName: "person.crop.circle.dashed")),
-            generateVC(viewController: DetailViewController(), title: "Detail", image: UIImage(systemName: "tent.2.circle.fill"))
+                       image: nil),
+            generateVC(viewController: UINavigationController(rootViewController: DetailViewController()),
+                       title: "Detail",
+                       image: nil)
         ]
     }
     
-    private func generateVC(viewController: UIViewController, title: String, image: UIImage?) -> UIViewController {
+    private func generateVC(viewController: UINavigationController, title: String, image: UIImage?) -> UIViewController {
         viewController.tabBarItem.title = title
         viewController.tabBarItem.image = image
         return viewController
