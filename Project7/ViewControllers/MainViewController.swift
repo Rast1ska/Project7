@@ -9,7 +9,11 @@ import UIKit
 
 class MainViewController: UIViewController {
     
+
     // MARK: -Private properties
+    private var petitions = [Petition]()
+    let networkManager = NetworkManager()
+    
     private let tableView: UITableView = {
         let tableView = UITableView()
         tableView.translatesAutoresizingMaskIntoConstraints = false
@@ -17,13 +21,22 @@ class MainViewController: UIViewController {
         return tableView
     }()
     
-    private var petitions = [String]()
-
     // MARK: -Override Methods
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.dataSource = self
         setupView()
+        networkManager.fetchPetision { [weak self] result in
+            switch result {
+            case .success(let petisions):
+                self?.petitions = petisions
+                DispatchQueue.main.async {
+                    self?.tableView.reloadData()
+                }
+            case .failure(let error):
+                print("Error: \(error.localizedDescription)")
+            }
+        }
     }
     
     // MARK: -Private Methods
@@ -45,14 +58,15 @@ class MainViewController: UIViewController {
 // MARK: - UITableViewDataSource
 extension MainViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        
+        petitions.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
         var content = cell.defaultContentConfiguration()
-        content.text = "Title goes here"
-        content.secondaryText = "Subtitle goes here"
+        let petition = petitions[indexPath.row]
+        content.text = petition.title
+        content.secondaryText = petition.body
         cell.contentConfiguration = content
         return cell
     }
